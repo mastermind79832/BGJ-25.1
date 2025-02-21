@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      STREET LIGHT_0: -5429061937573200326
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

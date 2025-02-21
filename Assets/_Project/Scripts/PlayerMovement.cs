@@ -6,9 +6,10 @@ public class PlayerMovement : MonoBehaviour
     public Joystick m_Joystick;
 	public float moveSpeed = 5f; // Base movement speed
 	public float maxCounterShift = 5f; // Max counter shift force
-	public float maxTilt = 10f; // Max tilt before dropping an item// Max tilt before dropping an item
+	public float maxTilt = 10f; // Max tilt before dropping an item
 	public Vector2 randomWeightShiftInterval;
 	public float weightShiftRange;
+	public float horizontalMoveSpeed;
 
 	public RectTransform balanceBar;							// UI balance indicator
 	public Image balanceFill;									// UI balance bar color
@@ -49,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		transform.parent.position += Vector3.right * horizontalMoveSpeed * Time.fixedDeltaTime;
 		// Move player based on input
 		rb.linearVelocity = (movementInput * moveSpeed) + (Vector2.down * balance);
 	}
